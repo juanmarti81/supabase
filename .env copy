@@ -1,0 +1,78 @@
+############
+# Secrets
+# YOU MUST CHANGE THESE BEFORE GOING INTO PRODUCTION
+############
+
+POSTGRES_PASSWORD=Jm4836Ma
+JWT_SECRET=juanmanuelmarti1981
+ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICAgInJvbGUiOiAiYW5vbiIsCiAgICAiaXNzIjogInN1cGFiYXNlIiwKICAgICJpYXQiOiAxNjczMjMzMjAwLAogICAgImV4cCI6IDE4MzA5OTk2MDAKfQ.2TN11NfIBXWc1008zQTvpQSapjdlQJBuK26QuKHUft0
+SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ewogICAgInJvbGUiOiAic2VydmljZV9yb2xlIiwKICAgICJpc3MiOiAic3VwYWJhc2UiLAogICAgImlhdCI6IDE2NzMyMzMyMDAsCiAgICAiZXhwIjogMTgzMDk5OTYwMAp9.pXR5eMvjnXRLLzxHMW5apT3otoiqMoxFRrLaMZbdG3k
+
+
+############
+# Database - You can change these to any PostgreSQL database that has logical replication enabled.
+############
+
+POSTGRES_HOST=150.139.145.245
+POSTGRES_DB=cl9lt8mwd0003cmtg520z4vhs
+POSTGRES_USER=cl9lt8mwa0001cmtgamescne1
+POSTGRES_PORT=9000
+
+
+############
+# API Proxy - Configuration for the Kong Reverse proxy.
+############
+
+KONG_HTTP_PORT=8000
+KONG_HTTPS_PORT=8443
+
+
+############
+# API - Configuration for PostgREST.
+############
+
+PGRST_DB_SCHEMAS=public,storage,graphql_public
+
+
+############
+# Auth - Configuration for the GoTrue authentication server.
+############
+
+## General
+SITE_URL=http://supabase.juanmarti.link
+ADDITIONAL_REDIRECT_URLS=
+JWT_EXPIRY=3600
+DISABLE_SIGNUP=false
+API_EXTERNAL_URL=http://supabase.juanmarti.link
+
+## Mailer Config
+MAILER_URLPATHS_CONFIRMATION="/auth/v1/verify"
+MAILER_URLPATHS_INVITE="/auth/v1/verify"
+MAILER_URLPATHS_RECOVERY="/auth/v1/verify"
+MAILER_URLPATHS_EMAIL_CHANGE="/auth/v1/verify"
+
+## Email auth
+ENABLE_EMAIL_SIGNUP=true
+ENABLE_EMAIL_AUTOCONFIRM=false
+SMTP_ADMIN_EMAIL=admin@example.com
+SMTP_HOST=supabase-mail
+SMTP_PORT=2500
+SMTP_USER=fake_mail_user
+SMTP_PASS=fake_mail_password
+SMTP_SENDER_NAME=fake_sender
+
+## Phone auth
+ENABLE_PHONE_SIGNUP=true
+ENABLE_PHONE_AUTOCONFIRM=true
+
+
+############
+# Studio - Configuration for the Dashboard
+############
+
+STUDIO_DEFAULT_ORGANIZATION=Default Organization
+STUDIO_DEFAULT_PROJECT=Default Project
+
+STUDIO_PORT=3000
+# replace if you intend to use Studio outside of localhost
+SUPABASE_PUBLIC_URL=http://supabase.juanmarti.link
