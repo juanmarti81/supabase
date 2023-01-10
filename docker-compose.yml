@@ -36,13 +36,13 @@ services:
       - ${KONG_HTTP_PORT}:8000/tcp
       - ${KONG_HTTPS_PORT}:8443/tcp
     environment:
-      - KONG_DATABASE: "off"
-      - KONG_DECLARATIVE_CONFIG: /var/lib/kong/kong.yml
+      - KONG_DATABASE
+      - KONG_DECLARATIVE_CONFIG
       # https://github.com/supabase/cli/issues/14
-      - KONG_DNS_ORDER: LAST,A,CNAME
-      - KONG_PLUGINS: request-transformer,cors,key-auth,acl
-      - KONG_NGINX_PROXY_PROXY_BUFFER_SIZE: 160k
-      - KONG_NGINX_PROXY_PROXY_BUFFERS: 64 160k
+      - KONG_DNS_ORDER
+      - KONG_PLUGINS
+      - KONG_NGINX_PROXY_PROXY_BUFFER_SIZE
+      - KONG_NGINX_PROXY_PROXY_BUFFERS
     volumes:
       - ./volumes/api:/var/lib/kong:ro
 
