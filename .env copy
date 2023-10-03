@@ -39,11 +39,11 @@ PGRST_DB_SCHEMAS=public,storage,graphql_public
 ############
 
 ## General
-SITE_URL=http://supabase.juanmarti.link
+SITE_URL=http://back.juanmarti.link
 ADDITIONAL_REDIRECT_URLS=
 JWT_EXPIRY=3600
 DISABLE_SIGNUP=false
-API_EXTERNAL_URL=http://supabase.juanmarti.link
+API_EXTERNAL_URL=http://back.juanmarti.link
 
 ## Mailer Config
 MAILER_URLPATHS_CONFIRMATION="/auth/v1/verify"
@@ -75,4 +75,4 @@ STUDIO_DEFAULT_PROJECT=Default Project
 
 STUDIO_PORT=3000
 # replace if you intend to use Studio outside of localhost
-SUPABASE_PUBLIC_URL=http://supabase.juanmarti.link
+SUPABASE_PUBLIC_URL=http://back.juanmarti.link
